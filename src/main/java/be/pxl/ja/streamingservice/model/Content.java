@@ -1,24 +1,33 @@
 package be.pxl.ja.streamingservice.model;
 
 public abstract class Content {
-    private String title;
-    private H1.Rating maturityRating;
+	private String title;
+	private Rating maturityRating;
+	private String imageUrl;
 
-    public Content(String title, H1.Rating maturityRating) {
-        this.title = title;
-        this.maturityRating = maturityRating;
-    }
+	public Content(String title, Rating maturityRating) {
+		this.title = title;
+		this.maturityRating = maturityRating;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public Rating getMaturityRating() {
+		return maturityRating;
+	}
 
-    public H1.Rating getMaturityRating() {
-        return maturityRating;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    @Override
-    public String toString() {
-        return title;
-    }
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	@Override
+	public String toString() {
+		return title;
+	}
 }
